@@ -4,9 +4,7 @@ import re
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 amazon_reviews = pd.read_csv("AllProductReviews.csv")
-
 
 # Find the amount of words for a given review
 def amount_of_words(review):
