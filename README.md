@@ -1,2 +1,3 @@
 # Amazon-Earbud-Reviews
-A model that predicts the earbud rating given a review.
+## Introduction
+The purpose of this project is to predict the appropriate rating from an Amazon review.
