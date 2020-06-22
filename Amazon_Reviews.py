@@ -22,3 +22,14 @@ def avg_word_length(review):
         return None
     else:
         return sum(length_of_words)/number_of_words
+
+def stemming_and_lemmizing(text_column, nlp=spacy.load('en_core_web_sm')):
+    # Generate stopwords
+    stopwords = nlp.Defaults.stop_words
+    doc = nlp(text_column)
+    # Lemmatize all entries 
+    lemmas = [token.lemma_ for token in doc]
+    # Extracting only the tokens that aren't stopwords and aren't anything but purely alphabetical
+    filtered_lemmas = [lem for lem in lemmas if lem.isalpha() and lem not in stopwords]
+    sentences = ' '.join(updated)
+    return sentences
